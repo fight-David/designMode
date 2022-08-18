@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>jquery each</p>
+    <p>jquery each</p>
+    <p>jquery each</p>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+
+    <script>
+        let arr = [1, 2, 3]
+        let nodeList = document.getElementsByTagName('p')
+        let m = new Map()
+        m.set('a', 100)
+        m.set('b', 200)
+
+
+        function each(data) {
+            // 生成遍历器
+            // let iterator = data[Symbol.iterator]()
+
+            // 带有遍历器特性的对象：data[Symbol.iterator] 有值
+            for (let item of data) console.log(item);
+
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+
+            // let item = {
+            //     done: false
+            // }
+
+            // while (!item.done) {
+            //     item = iterator.next()
+            //     if (!item.done) console.log(item.value);
+            // }
+        }
+
+        each(arr)
+        each(nodeList)
+        each(m)
+    </script>
+</body>
+
+</html>

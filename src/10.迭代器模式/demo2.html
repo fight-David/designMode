@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>jquery each</p>
+    <p>jquery each</p>
+    <p>jquery each</p>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+
+    <script>
+        let arr = [1, 2, 3]
+        let nodeList = document.getElementsByTagName('p')
+        let $p = $('p')
+
+
+        function each(data) {
+            let $data = $(data) // 生成迭代器
+            $data.each((key, val) => {
+                console.log(key, val);
+            })
+        }
+        each(arr)
+        each(nodeList)
+        each($p)
+
+        // 顺序遍历有序集合
+        // 使用者不必知道集合的内部结构
+
+        // 要对这三个变量进行遍历，需要写三个遍历方法
+        // 第一
+        // arr.forEach(item => {
+        //     console.log(item);
+        // })
+        // // 第二
+        // let i, length = nodeList.length
+        // for (i = 0; i < length; i++) console.log(nodeList[i]);
+        // // 第三
+        // $p.each((key, p) => console.log(key, p))
+    </script>
+</body>
+
+</html>

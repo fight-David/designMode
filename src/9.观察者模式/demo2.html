@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">btn</button>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+
+    <script>
+        // 先订阅上，如果是按钮点击了，就触发点击的事件 (触发所有的观察者)
+        $('#btn1').click(function () {
+            console.log(1);
+        })
+        $('#btn1').click(function () {
+            console.log(2);
+        })
+        $('#btn1').click(function () {
+            console.log(3);
+        })
+    </script>
+</body>
+
+</html>
